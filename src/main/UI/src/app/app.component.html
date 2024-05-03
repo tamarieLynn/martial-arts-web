@@ -1,11 +1,10 @@
 
 <!--colors are not named correctly, just playing around-->
 <style>
-  :host {
+:host {
     --bright-red: oklch(0.62 0.253 29.104);
     --black: oklch(0.17 0.002 17.321);
     --red: oklch(0.585 0.24 29.234 / 0.92);
-    --vivid-pink: oklch(0.642 0.302 322.718 / 0.97);
     --dark-red: oklch(0.475 0.193 29.061);
     --orange-red: oklch(0.62 0.253 29.104);
 /*change colors here^^^^*/
@@ -65,9 +64,9 @@
     position: relative;
   }
 
-  /*.angular-logo {*/
-  /*  max-width: 9.2rem;*/
-  /*}*/
+  .angular-logo {
+    max-width: 9.2rem;
+  }
 
   .content {
     display: flex;
@@ -99,29 +98,29 @@
     gap: 1.25rem;
   }
 /*unused*/
-  /*.pill {*/
-  /*  display: flex;*/
-  /*  align-items: center;*/
-  /*  --pill-accent: var(--bright-red);*/
-  /*  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);*/
-  /*  color: var(--pill-accent);*/
-  /*  padding-inline: 0.75rem;*/
-  /*  padding-block: 0.375rem;*/
-  /*  border-radius: 2.75rem;*/
-  /*  border: 0;*/
-  /*  transition: background 0.3s ease;*/
-  /*  font-family: var(--inter-font);*/
-  /*  font-size: 0.875rem;*/
-  /*  font-style: normal;*/
-  /*  font-weight: 500;*/
-  /*  line-height: 1.4rem;*/
-  /*  letter-spacing: -0.00875rem;*/
-  /*  text-decoration: none;*/
-  /*}*/
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-red);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+  }
 
-  /*.pill:hover {*/
-  /*  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);*/
-  /*}*/
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
 
   .pill-group .pill:nth-child(6n + 1) {
     --pill-accent: var(--bright-red);
@@ -168,23 +167,29 @@
       margin-block: 1.5rem;
     }
   }
+#myPhoto {
+  max-width: 100%; /* Set maximum width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+}
 </style>
 
 <main class="main">
   <div class="content">
     <div class="left-side">
+      <link rel="stylesheet" type="text/css" href="../styles.css">
 
-<!--      everything from line 177 to 222 is the one Angular logo-->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 500 200"
-      fill="none"
-      class="text-logo"
-      >
-      <text x="50" y="100" font-family="Arial" font-size="24" fill="black">VVNAZ Martial Arts</text>
+<!--vvnaz header-->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 80">
+        <text x="0" y="40" font-family="Arial" font-size="24" fill="#4e86b1">
+          <animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
+          VVNAZ<animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
+          <animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
+          Martial <animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
+          Arts<animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
+        </text>
       </svg>
 
-<!--      <svg-->
+      <!--      <svg-->
 <!--        xmlns="http://www.w3.org/2000/svg"-->
 <!--        viewBox="0 0 982 239"-->
 <!--        fill="none"-->
@@ -229,8 +234,10 @@
 <!--          <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>-->
 <!--        </defs>-->
 <!--      </svg>-->
-      <h1>Hello, {{ title }}</h1>
+<!--      <h1>Hello, {{ title }}</h1>-->
       <p>Welcome to VVNAZ Martial Arts 2.0🎉</p>
+
+      <img id="myPhoto" src="https://vvnazma2.s3.us-east-2.amazonaws.com/IMG_6294.jpg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBAaCXVzLWVhc3QtMiJIMEYCIQD0mJikauKUsue9h1hpS7AZKNsxT40CR3SxUBuUM9T84gIhAJgm%2FGrBMMSmJIAbsIfEoh0k7KsnSa1j8KB9f8KqUtN4KuQCCGoQABoMMDM3OTE2Mjk1NDM3Igx2Qs8UZV%2FQY9Fo7ioqwQJsD8XCQa%2BSOlew8k82IHHdv8gQ%2FE6phX9MlrhVbuVBUTA8UL82Q9v59A6aHoFAp%2F12fXlrf8eKM9zunB7ujWISiMF2rJlESiX1%2BOKTOJZghuGjzZsc%2FN1TBhwyctI6H0OZHYWdXU2QPrU5YF5Ela%2BUuao4PRph2dduzGS%2Ff57DBuldr21DIcYn798XoFXEivyD8AweQay5XLQtUqUx%2B2zIAXVCsDBGtF00im0tD4zCaYcZLRKYuFpirOqhEJ1UWWFCVCMs7J2e%2BUNuRkO%2FDgPXV6fTzAzCalEi%2F3xIN2IDObcPxaFY1sduLJWhUmrTwbGxAXQrXyoHsb2PbffP9%2BPtX0%2BBqsdlkDbh6KDzOWqdn2Wumu%2Boq1Q%2Ft%2FcgmumaddWSr2pC5HYwrcXip0J%2B8jxfti9nALsGrf4ion2Pc6MDMo8w0t%2FQsQY6sgJz%2BdoINnk07q20jiE0%2BJ8iNjFQL5bs63lzh3GFojz9uqYOJHVcQHgYmzRwtuXZ0G9yfeZdgJr4pYD60edyY0eB6tqU7oHVgl1%2B51LSA1Me69eyNRTqJKFsfkvBi62dRM7bTkhke87IeqJbzpiWVaxkZ%2FekEHU5hShGioQyYHWz1SNQkE%2BIEWaCDJyreO%2FbI%2F02tfpCsqXNLp9W93oWZx2ehzf4qpkGerSBD3NaSxDkEQfQ%2Fy3dssVSHQuBWgYa%2BIqvIlp5ENqCyFANwo66X9yftaRxfQF8yVTwNmKNK9hLry4QqH9F8ZQrFcv0BynqzET2qtHm9YyfCyYyOtE%2FTUWAAP5kP%2BsyYU6EWfWCe8cL4cltZcnV7BDEjS0%2BMSg2zwh0JiRS1wmXGMrzAwzrmsNykJ0%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240503T010013Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQRU74YEGXMWIFQ6A%2F20240503%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=6e46c46ea71b42da78d75222a10c9c1e2729743e255267eebfae9cb00479b523"/>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -239,8 +246,7 @@
           { title: 'Our Church', link: 'https://www.vvchurchlancaster.com/' },
           { title: 'Donate here!', link: 'https://app.easytithe.com/inline/dedicated/?uid=vall4233225&amt=NaN' },
           { title: 'Check out our Instagram', link: 'https://www.instagram.com/vvnaz_ma/' },
-          { title: 'World Belt Belt Bureau', link: 'https://wbbb.site/index.php' },
-          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
+          { title: 'World Belt Belt Bureau', link: 'https://wbbb.site/index.php' }
         ]; track item.title) {
           <a
             class="pill"
@@ -263,6 +269,8 @@
           </a>
         }
       </div>
+
+<!--      social media links can be added keep-->
 <!--      <div class="social-links">-->
 <!--        <a-->
 <!--          href="https://github.com/angular/angular"-->
@@ -327,14 +335,5 @@
     </div>
   </div>
 </main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 
 <router-outlet />
