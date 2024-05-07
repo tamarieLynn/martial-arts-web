@@ -168,24 +168,30 @@
     }
   }
 #myPhoto {
-  max-width: 100%; /* Set maximum width to 100% of its container */
+  max-width: 30%; /* Set maximum width to 100% of its container */
   height: auto; /* Maintain aspect ratio */
+  position: relative;
+  left: 35%;
 }
 </style>
 
 <main class="main">
   <div class="content">
     <div class="left-side">
+      <div class="app-root">
+        <!-- Other content of your app component goes here -->
+        <app-background></app-background>
       <link rel="stylesheet" type="text/css" href="../styles.css">
 
 <!--vvnaz header-->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 80">
-        <text x="0" y="40" font-family="Arial" font-size="24" fill="#4e86b1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
+        <text x="0" y="60" font-family="Jaro" font-size="30" fill="#F8F8FF" font-weight="bold">
           <animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
           VVNAZ<animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
           <animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
-          Martial <animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
-          Arts<animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
+          MARTIAL <animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
+          ARTS<animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
+          2.0<animate dur="2s" attributeName="y" values="40; 35; 40" keyTimes="0; 0.5; 1" repeatCount="indefinite" />
         </text>
       </svg>
 
@@ -236,6 +242,7 @@
 <!--      </svg>-->
 <!--      <h1>Hello, {{ title }}</h1>-->
 <!--      <p>Welcome to VVNAZ Martial Arts 2.0🎉</p>-->
+
       <img id="myPhoto" src="https://vvnazma2.s3.us-east-2.amazonaws.com/IMG_6294.jpg" alt="Group photo"/>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
@@ -265,8 +272,6 @@
             </svg>
           </a>
     }
-
-
 
     <!--      social media links can be added keep-->
     <!--      <div class="social-links">-->
@@ -331,6 +336,9 @@
     <!--        </a>-->
     <!--      </div>-->
   </div>
+  </div>
 </main>
 
 <router-outlet />
+<!--shirt order-->
+<!--belt requirements-->
