@@ -221,7 +221,6 @@
       <div class="divider" role="separator" aria-label="Divider"></div>
 
       <div class="title-container">
-        <!-- Use a regular HTML element like div for *ngFor -->
         <div *ngFor="let item of items">
           <a class="title-link" [href]="item.link" target="_blank" rel="noopener">
             <span class="title-text">{{ item.title }}</span>
@@ -231,6 +230,7 @@
           </a>
         </div>
       </div>
+
 
 
       <!--    <div class="divider" role="separator" aria-label="Divider"></div>-->
