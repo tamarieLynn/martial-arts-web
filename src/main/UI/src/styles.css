@@ -3,10 +3,27 @@ html, body {
   border: 1px solid #ff0000; /* Adjust the color and width as needed */
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensure the border covers the entire height of the viewport */
+  height: 150%; /* Ensure the border covers the entire height of the viewport */
   background-color: #000000;
   background-image: url('https://vvnazma2.s3.us-east-2.amazonaws.com/VVNAZ+MA_LOGO_PRODUCTION.png'); /* Set background image */
   background-size: 50%; /* Cover the entire background */
   background-position: center; /* Center the background image */
   background-color: rgba(0, 0, 0, 0.7); /* Black color with 50% opacity */
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Make the container take up the full height of the viewport */
+}
+
+/*.pill-large {*/
+/*  font-size: 1.5rem; !* Adjust the font size as needed *!*/
+/*  !* Add any other styles you want for larger elements *!*/
+/*}*/
+.title-text {
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the font bold */
+  color: #ffffff; /* Set the text color */
 }
