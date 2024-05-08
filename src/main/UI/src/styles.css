@@ -15,13 +15,12 @@ html, body {
   flex-direction: column;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  height: 100vh; /* Make the container take up the full height of the viewport */
+  height: 10vh; /* Make the container take up the full height of the viewport */
+  padding: 10px; /* Add padding to create space around the links */
+  background-color: red; /* Set the background color to white */
+  border-radius: 5px; /* Add rounded corners to the box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
-
-/*.pill-large {*/
-/*  font-size: 1.5rem; !* Adjust the font size as needed *!*/
-/*  !* Add any other styles you want for larger elements *!*/
-/*}*/
 .title-text {
   font-size: 18px; /* Adjust font size as needed */
   font-weight: bold; /* Make the font bold */
